@@ -1,0 +1,39 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+  height: 400px; /* Adjust height as needed */
+}
+
+.banner-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #1d4e89; /* Navy Blue text color */
+  font-family: "Montserrat", sans-serif;
+  font-size: 3.5rem; /* Increase font size */
+  font-weight: 600;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2); /* Soft text shadow */
+  z-index: 2;
+
+  .adopt {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+.banner-image {
+  position: absolute;
+  top: 50%;
+  right: 2%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.banner-image img {
+  max-width: 100%;
+  height: auto;
+}

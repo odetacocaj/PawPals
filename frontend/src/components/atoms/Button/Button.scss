@@ -1,0 +1,20 @@
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donateButton {
+  background-color: #7dcfb6;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.donateButton:hover {
+  background-color: #008ba0;
+}
