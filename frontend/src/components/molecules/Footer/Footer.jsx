@@ -3,22 +3,11 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import { Link } from "react-router-dom";
+import "./Footer.scss";
 
 const Footer = () => {
-  const footerStyle = {
-    backgroundColor: "#f0f0f0",
-    padding: "2rem",
-    textAlign: "center",
-    marginTop: "auto",
-  };
-
-  const iconStyle = {
-    fontSize: "2rem",
-    color: "#333",
-  };
-
   return (
-    <footer style={footerStyle}>
+    <footer className="footer-content">
       <Typography variant="h6" gutterBottom>
         Connect with us
       </Typography>
@@ -26,21 +15,21 @@ const Footer = () => {
         <Grid item>
           <IconButton>
             <Link to="https://www.facebook.com">
-              <FacebookIcon style={iconStyle} />
+              <FacebookIcon className="footer-icon" />
             </Link>
           </IconButton>
         </Grid>
         <Grid item>
           <IconButton>
             <Link to="https://www.twitter.com">
-              <TwitterIcon style={iconStyle} />
+              <TwitterIcon className="footer-icon" />
             </Link>
           </IconButton>
         </Grid>
         <Grid item>
           <IconButton>
             <Link to="https://www.instagram.com">
-              <InstagramIcon style={iconStyle} />
+              <InstagramIcon className="footer-icon" />
             </Link>
           </IconButton>
         </Grid>

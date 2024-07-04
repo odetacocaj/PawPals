@@ -24,42 +24,51 @@ const Faq = () => {
   const data = [
     {
       id: 1,
-      question: "How many team members can I invite?",
+      question: "Are all pets at your center spayed or neutered before adoption?",
       answer:
-        "You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.",
+        "Yes, all pets available for adoption are spayed or neutered to promote responsible pet ownership and prevent overpopulation.",
     },
     {
       id: 2,
-      question: "What is the maximum file upload size?",
-      answer: "No more than 2GB. All files in your account must fit your allotted storage space.",
+      question: "What if I can no longer care for a pet I adopted from your center?",
+      answer:
+        "We understand that circumstances may change. If you can no longer care for your adopted pet, please contact us. We can assist in finding a new loving home or provide guidance on rehoming options.",
     },
     {
       id: 3,
-      question: " How do I reset my password?",
+      question: "Do you accept donations?",
       answer:
-        "Click “Forgot password” from the login page or “Change password” from your profile     page. A reset link will be emailed to you.",
+        "Yes, donations are crucial to supporting our mission. We accept monetary donations, as well as supplies such as pet food, bedding, and toys. Visit our donation page to learn more about how you can contribute.",
     },
     {
       id: 4,
-      question: "Can I cancel my subscription?",
-      answer: "Yes! Send us a message and we’ll process your request no questions asked.",
+      question: "Can I volunteer at your adoption center?",
+      answer:
+        "Absolutely! We welcome volunteers who are passionate about animals. Visit our volunteer page on the website to learn more about opportunities and how to get involved.",
     },
     {
       id: 5,
-      question: "Do you provide additional support?",
+      question: "How can I adopt a pet from your center?",
       answer:
-        " Chat and email support is available 24/7. Phone lines are open during normal business hours.",
+        "Begin by browsing our available pets online or visiting us in person. Once you've found a furry friend you'd like to adopt, fill out an adoption application. Our team will review your application to ensure the best match for both you and the pet.",
     },
   ];
 
   return (
     <div className="faq-accordion df">
+      <div className="card-container-text">
+        <h1 className="card-container-title">FAQ</h1>
+        <p className="card-container-info">
+          Explore answers to common questions about our services and adoption process. If you have
+          more inquiries, feel free to contact us directly.
+        </p>
+      </div>
       <div className="faq-accordion-container">
         <div className="faq-image-container">
-          <img src={faqLogo} />
+          <img className="faq-logo" src={faqLogo} />
         </div>
         <div className="faq-accordion-content">
-          <h1 className="faq-accordion-title">FAQ</h1>
+          {/* <h1 className="faq-accordion-title">FAQ</h1> */}
 
           {data.map((item) => (
             <div className="faq-accordion-question" key={item.id}>
