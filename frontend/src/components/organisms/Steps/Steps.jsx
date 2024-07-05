@@ -15,7 +15,7 @@ function Steps() {
       </div>
       <div className="stepper-item ">
         <div className="step-counter"></div>
-        <div className="step-name">Take your pet home</div>
+        <div className="step-name">Take your pet</div>
         <div className="step-description">Follow the adoption process.</div>
       </div>
     </div>

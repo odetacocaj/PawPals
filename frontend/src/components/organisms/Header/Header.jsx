@@ -2,6 +2,14 @@ import { NavLink } from "react-router-dom";
 import Button from "../../atoms/Button/Button";
 import "./Header.scss";
 import logo from "../../../assets/images/logo.png";
+import TemporaryDrawer from "../../molecules/Drawer/Drawer";
+
+const menuItems = [
+  { text: "Home", route: "/" },
+  { text: "About", route: "/about" },
+  { text: "Contact", route: "/contact" },
+];
+
 const Header = () => {
   return (
     <header className="header p-4 flex items-center">
@@ -11,33 +19,22 @@ const Header = () => {
         </NavLink>
       </div>
       <nav className="flex-grow">
-        <ul className="menu flex justify-end space-x-4">
-          <li>
-            <NavLink to="/" className="hover:text-gray-400">
-              Home
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/about" className="hover:text-gray-400">
-              About us
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/dogs" className="hover:text-gray-400">
-              Our Dogs
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact" className="hover:text-gray-400">
-              Contact
-            </NavLink>
-          </li>
-          <li>
-            <NavLink to="/donate" className="">
-              <Button className="donateButton">Donate</Button>
-            </NavLink>
-          </li>
+        <ul className="menu">
+          {menuItems.map((item, index) => (
+            <li key={index} className="large-screen-menu-item">
+              <NavLink to={item.route} className="hover:text-gray-400">
+                {item.text}
+              </NavLink>
+            </li>
+          ))}
+
+          <Button className="large-screen-menu-item donateButton">Donate</Button>
         </ul>
+        <div className="mobile-menu">
+          <TemporaryDrawer menuItems={menuItems}>
+            <Button className="donateButton ml-4 mt-4">Donate</Button>
+          </TemporaryDrawer>
+        </div>
       </nav>
     </header>
   );

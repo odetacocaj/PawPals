@@ -1,5 +1,5 @@
 import "./Faq.scss";
-import faqLogo from "../../../assets/images/faqLogo.png";
+import faqLogo from "../../../assets/images/faqLogo.jpeg";
 
 const Faq = () => {
   const handleToggle = (e) => {
@@ -10,7 +10,6 @@ const Faq = () => {
       question.classList.remove("faq-accordion-question-button-active");
       answer.classList.remove("faq-accordion-answer-active");
     } else {
-      // // reset
       const openQuestions = document.querySelectorAll(".faq-accordion-answer-active");
       const openBtn = document.querySelectorAll(".faq-accordion-question-button-active");
       openQuestions?.forEach((item) => item.classList.remove("faq-accordion-answer-active"));
@@ -52,13 +51,19 @@ const Faq = () => {
       answer:
         "Begin by browsing our available pets online or visiting us in person. Once you've found a furry friend you'd like to adopt, fill out an adoption application. Our team will review your application to ensure the best match for both you and the pet.",
     },
+    {
+      id: 6,
+      question: "Do you offer any support after adoption?",
+      answer:
+        "Yes! We provide post-adoption support to ensure a smooth transition for both you and your new pet. Our team is available to offer advice on pet care, behavior, and any other concerns you may have.",
+    },
   ];
 
   return (
     <div className="faq-accordion df">
       <div className="card-container-text">
         <h1 className="card-container-title">FAQ</h1>
-        <p className="card-container-info">
+        <p className="card-container-info p-3">
           Explore answers to common questions about our services and adoption process. If you have
           more inquiries, feel free to contact us directly.
         </p>
@@ -68,8 +73,6 @@ const Faq = () => {
           <img className="faq-logo" src={faqLogo} />
         </div>
         <div className="faq-accordion-content">
-          {/* <h1 className="faq-accordion-title">FAQ</h1> */}
-
           {data.map((item) => (
             <div className="faq-accordion-question" key={item.id}>
               <button className="faq-accordion-question-button" onClick={handleToggle}>

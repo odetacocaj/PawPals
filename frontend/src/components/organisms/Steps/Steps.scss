@@ -1,4 +1,5 @@
 .stepper-wrapper {
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -32,7 +33,12 @@
     margin-bottom: 6px;
   }
 
+  .step-name {
+    text-align: center;
+  }
+
   .step-description {
+    text-align: center;
     font-size: small;
     color: darkgray;
   }

@@ -2,7 +2,6 @@
   font-size: 12px;
   min-height: 100vh;
   height: 100%;
-  padding-top: 80px;
   display: flex;
   justify-content: center;
 }
@@ -13,6 +12,7 @@
   justify-content: center;
   align-items: center;
   .card-container-text {
+    padding-bottom: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,6 +32,9 @@
     }
 
     .card-container-info {
+      padding: 20px;
+      text-align: center;
+      font-size: larger;
       color: darkgray;
     }
   }
@@ -39,18 +42,26 @@
 
 .faq-logo {
   max-width: 70%;
-  transform: rotate(-25deg);
+  border-radius: 50%;
+}
+
+.faq-image-container {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .faq-accordion-container {
   width: 90%;
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 20px;
   padding: 20px;
-  padding-top: 120px;
   padding-bottom: 40px;
   position: relative;
-  background-color: white;
+  background-color: #b3e8ef;
+  margin-top: 40px;
 }
 
 .faq-accordion-container:before {
@@ -62,14 +73,8 @@
   transform: translateX(-50%);
 }
 
-.faq-accordion-title {
-  text-align: center;
-  margin-bottom: 20px;
-  color: hsl(238, 29%, 16%);
-  font-size: 32px;
-}
 .faq-accordion-question {
-  border-bottom: 1px solid hsl(240, 5%, 91%);
+  border-bottom: 1px solid white;
   padding-bottom: 10px;
 }
 
@@ -84,15 +89,11 @@
   color: hsl(237, 12%, 33%);
   transition: color 0.2s ease-in-out;
   cursor: pointer;
+  text-align: left;
 }
 
 .faq-accordion-question-button:hover {
   color: hsl(14, 88%, 65%);
-}
-
-.faq-accordion-question-button:after {
-  content: url("../Faq/assets/faq-accordion-card-main/images/icon-arrow-down.svg");
-  transition: all 0.2s ease-in-out;
 }
 
 .faq-accordion-question-button-active {
@@ -116,33 +117,20 @@
   transition: all 0.3s ease;
 }
 .faq-accordion-answer-active {
-  /* max-height: 100px; */
   min-height: 50px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
   .faq-accordion-container {
     height: 75%;
     display: flex;
     justify-content: flex-end;
     padding-top: 50px;
-
-    background: url("../Faq/assets/faq-accordion-card-main/images/illustration-woman-online-desktop.svg")
-        bottom 3.1rem left -5.1rem no-repeat,
-      url("../Faq/assets/faq-accordion-card-main/images/bg-pattern-desktop.svg") bottom -10rem left -36rem
-        no-repeat;
-
-    background-color: white;
+    background-color: #b3e8ef;
   }
 
-  .faq-accordion-container:before {
-    content: url(" ../Faq/assets/faq-accordion-card-main/images/illustration-box-desktop.svg");
-    top: 60%;
-    left: 3.5%;
-    transform: translate(-50%, -55%);
-
-    height: 190px;
-    animation: dropbox 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  .faq-image-container {
+    width: 50%;
   }
 
   @keyframes dropbox {
@@ -162,5 +150,10 @@
 
   .faq-accordion-title {
     text-align: left;
+  }
+}
+
+@media (max-width: 480px) {
+  faq-accordion-container {
   }
 }
