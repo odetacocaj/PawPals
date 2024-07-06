@@ -3,19 +3,14 @@ import Button from "../../atoms/Button/Button";
 import "./Header.scss";
 import logo from "../../../assets/images/logo.png";
 import TemporaryDrawer from "../../molecules/Drawer/Drawer";
-
-const menuItems = [
-  { text: "Home", route: "/" },
-  { text: "About", route: "/about" },
-  { text: "Contact", route: "/contact" },
-];
+import { menuItems } from "../../../assets/static/dummydata/menuItems";
 
 const Header = () => {
   return (
     <header className="header p-4 flex items-center">
       <div className="logo flex-shrink-0">
         <NavLink to="/">
-          <img src={logo} alt="Dog Adoption Center Logo" className="h-10" />
+          <img src={logo} alt="Dog Adoption Center Logo" className="h-[55px]" />
         </NavLink>
       </div>
       <nav className="flex-grow">

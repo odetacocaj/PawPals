@@ -3,6 +3,9 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
 import Dogs from "./pages/Dogs/Dogs";
+// import dotenv from "dotenv";
+// dotenv.config();
+
 const App = () => {
   return (
     <Routes>

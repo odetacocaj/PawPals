@@ -51,24 +51,18 @@ const Faq = () => {
       answer:
         "Begin by browsing our available pets online or visiting us in person. Once you've found a furry friend you'd like to adopt, fill out an adoption application. Our team will review your application to ensure the best match for both you and the pet.",
     },
-    {
-      id: 6,
-      question: "Do you offer any support after adoption?",
-      answer:
-        "Yes! We provide post-adoption support to ensure a smooth transition for both you and your new pet. Our team is available to offer advice on pet care, behavior, and any other concerns you may have.",
-    },
   ];
 
   return (
     <div className="faq-accordion df">
       <div className="card-container-text">
         <h1 className="card-container-title">FAQ</h1>
-        <p className="card-container-info p-3">
+        <p className="card-container-info text-base p-3">
           Explore answers to common questions about our services and adoption process. If you have
           more inquiries, feel free to contact us directly.
         </p>
       </div>
-      <div className="faq-accordion-container">
+      <div className="faq-accordion-container text-base">
         <div className="faq-image-container">
           <img className="faq-logo" src={faqLogo} />
         </div>

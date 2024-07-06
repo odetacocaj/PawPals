@@ -34,7 +34,6 @@
     .card-container-info {
       padding: 20px;
       text-align: center;
-      font-size: larger;
       color: darkgray;
     }
   }
@@ -60,7 +59,7 @@
   padding: 20px;
   padding-bottom: 40px;
   position: relative;
-  background-color: #b3e8ef;
+  background-color: #fbd1a2;
   margin-top: 40px;
 }
 
@@ -126,7 +125,7 @@
     display: flex;
     justify-content: flex-end;
     padding-top: 50px;
-    background-color: #b3e8ef;
+    background-color: #fbd1a2;
   }
 
   .faq-image-container {
@@ -150,10 +149,5 @@
 
   .faq-accordion-title {
     text-align: left;
-  }
-}
-
-@media (max-width: 480px) {
-  faq-accordion-container {
   }
 }
