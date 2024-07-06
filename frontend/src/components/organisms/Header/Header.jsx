@@ -22,8 +22,9 @@ const Header = () => {
               </NavLink>
             </li>
           ))}
-
-          <Button className="large-screen-menu-item donateButton">Donate</Button>
+          <NavLink to="/donate">
+            <Button className="large-screen-menu-item donateButton">Donate</Button>
+          </NavLink>
         </ul>
         <div className="mobile-menu">
           <TemporaryDrawer menuItems={menuItems}>

@@ -1,6 +1,8 @@
 import ReusableCard from "../../molecules/ReusableCard/ReusableCard";
 import dogs from "../../../assets/static/dummydata/dogs";
 import "./DogList.scss";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import { Link } from "react-router-dom";
 
 const DogList = () => {
   return (
@@ -13,8 +15,9 @@ const DogList = () => {
         </p>
       </div>
       <div className="dog-list">
-        {dogs.map((dog, index) => (
+        {dogs.slice(0, 6).map((dog, index) => (
           <ReusableCard
+            isClickable={false}
             key={index}
             image={dog.image}
             name={dog.name}
@@ -23,6 +26,12 @@ const DogList = () => {
             gender={dog.gender}
           />
         ))}
+      </div>
+      <div className="flex justify-end pr-[50px]">
+        <Link to="/dogs" className="flex flex-row gap-1 items-center">
+          <span className="font-medium font-sans">View All</span>
+          <ArrowForwardIcon />
+        </Link>
       </div>
     </div>
   );

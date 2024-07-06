@@ -1,11 +1,12 @@
-import OurDogs from "../../components/organisms/OurDogs/OurDogs";
 import MainTemplate from "../../components/templates/MainTemplate/MainTemplate";
-function Dogs() {
+import Donate from "../../components/organisms/Donate/Donate";
+
+function DonatePage() {
   return (
     <MainTemplate>
-      <OurDogs />
+      <Donate></Donate>
     </MainTemplate>
   );
 }
 
-export default Dogs;
+export default DonatePage;

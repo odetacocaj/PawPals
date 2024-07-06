@@ -5,8 +5,9 @@ import EmailIcon from "@mui/icons-material/Email";
 import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 import "./ContactForm.scss";
 import { contactUsInfo } from "../../../assets/static/dummydata/contactUs";
-import { TextField, Button, CircularProgress } from "@mui/material";
+import { TextField, CircularProgress } from "@mui/material";
 import Alert from "@mui/material/Alert";
+import Button from "../../atoms/Button/Button";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -94,7 +95,7 @@ const ContactForm = () => {
           {loading ? (
             <CircularProgress size={24} />
           ) : (
-            <Button variant="contained" color="primary" type="submit">
+            <Button className="bg-[#1D4E89] text-white" type="submit">
               Send
             </Button>
           )}
