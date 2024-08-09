@@ -31,22 +31,24 @@ This project follows an atomic design structure to maintain component scalabilit
 
 # Installation: Clone the repository and install dependencies.
 
-bash
-Copy code
 git clone <repository-url>
+
 cd frontend
+
 npm install
 
 # Run the Application: Start the development server.
 
-bash
-Copy code
 npm run dev
+
 Open in Browser: Open http://localhost:3000 to view the app in your browser.
 
 # Acknowledgements
 
 React Documentation
+
 MUI Documentation
+
 Tailwind CSS Documentation
-ChatGPT 😊
+
+ChatGPT/ StackOverflow 😊
