@@ -28,7 +28,9 @@ const Header = () => {
         </ul>
         <div className="mobile-menu">
           <TemporaryDrawer menuItems={menuItems}>
-            <Button className="donateButton ml-4 mt-4">Donate</Button>
+            <NavLink to="/donate">
+              <Button className="donateButton ml-4 mt-4">Donate</Button>
+            </NavLink>
           </TemporaryDrawer>
         </div>
       </nav>

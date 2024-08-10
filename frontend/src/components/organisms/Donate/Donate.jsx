@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import { loadStripe } from "@stripe/stripe-js";
-import { TextField, Typography, Grid, Card, CardContent, Alert } from "@mui/material";
+import { TextField, Typography, Grid, Card, CardContent, Alert, Button } from "@mui/material";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import Button from "../../atoms/Button/Button";
 
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PK);
 
@@ -110,7 +109,8 @@ const DonateForm = () => {
                   <Grid item xs={12}>
                     <Button
                       type="submit"
-                      className="bg-[#1D4E89] text-white"
+                      variant="contained"
+                      color="primary"
                       disabled={!stripe || loading || !donationAmount}
                     >
                       {loading ? "Processing..." : "Donate"}

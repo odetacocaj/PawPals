@@ -1,11 +1,6 @@
-import MainTemplate from "../../components/templates/MainTemplate/MainTemplate";
 import ContactForm from "../../components/molecules/ContactForm/ContactForm";
 function Contact() {
-  return (
-    <MainTemplate>
-      <ContactForm />
-    </MainTemplate>
-  );
+  return <ContactForm />;
 }
 
 export default Contact;

@@ -3,9 +3,10 @@ import { Modal, Button, Select, MenuItem, FormControl, InputLabel, TextField } f
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-
+import Alert from "@mui/material/Alert";
 const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
   const [selectedDateTime, setSelectedDateTime] = useState({ date: null, time: null });
+  const [hiddenAlert, setHidden] = useState(true);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -42,7 +43,7 @@ const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
       onSchedule(dog, dateTime, formData);
       onClose();
     } else {
-      alert("Please fill in all fields before scheduling.");
+      setHidden(false);
     }
   };
 
@@ -77,9 +78,14 @@ const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
       closeAfterTransition
       className="flex content-center items-center justify-center p-10"
     >
-      <div className="modal-paper bg-white flex flex-col justify-center content-center items-center md:w-[50%] w-full h-[80%] md:h-full">
+      <div className="modal-paper bg-white flex flex-col justify-center content-center items-center md:w-[50%] w-full h-fit p-5">
         <div className="flex flex-col justify-center content-center items-center w-[90%] md:gap-4 gap-6">
           <h1 id="parent-modal-title">Schedule a meeting with {dog.name}</h1>
+          {!hiddenAlert && (
+            <Alert severity="warning" hidden={hiddenAlert}>
+              Please make sure to fill in all the required information.
+            </Alert>
+          )}
 
           <FormControl fullWidth>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -91,10 +97,9 @@ const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
               />
             </LocalizationProvider>
           </FormControl>
-
           <FormControl fullWidth>
             <InputLabel>Select Time</InputLabel>
-            <Select value={selectedDateTime?.time} onChange={handleTimeChange} fullWidth>
+            <Select value={selectedDateTime?.time} onChange={handleTimeChange} fullWidth required>
               {timeSlots.map((slot) => (
                 <MenuItem key={slot} value={slot}>
                   {slot}
@@ -102,33 +107,32 @@ const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
               ))}
             </Select>
           </FormControl>
-
           <TextField
             fullWidth
             label="Full Name"
             name="fullName"
+            required
             value={formData.fullName}
             onChange={handleInputChange}
           />
-
           <TextField
             fullWidth
+            required
             label="Email"
             name="email"
             type="email"
             value={formData.email}
             onChange={handleInputChange}
           />
-
           <TextField
             fullWidth
+            required
             label="Phone Number"
             name="phoneNumber"
             type="tel"
             value={formData.phoneNumber}
             onChange={handleInputChange}
           />
-
           <Button variant="contained" color="primary" onClick={handleSchedule}>
             Schedule
           </Button>
