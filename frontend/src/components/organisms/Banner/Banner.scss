@@ -26,7 +26,7 @@
 }
 
 .big-text {
-  font-size: 10vw;
+  font-size: xxx-large;
   font-weight: 800;
   margin: 0;
 }
@@ -51,17 +51,11 @@
 
 @media (max-width: 768px) {
   .banner {
-    height: auto;
-  }
-
-  .banner-image {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
+    height: 200px;
   }
 
   .big-text {
-    font-size: 12vw;
+    font-size: larger;
   }
 
   .banner a {
@@ -72,17 +66,11 @@
 
 @media (max-width: 480px) {
   .banner {
-    height: auto;
-  }
-
-  .banner-image {
-    height: 100%;
-    width: auto;
-    object-fit: contain;
+    height: 100px;
   }
 
   .big-text {
-    font-size: 14vw;
+    font-size: large;
   }
 
   .banner a {
