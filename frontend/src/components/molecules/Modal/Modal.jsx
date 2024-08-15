@@ -4,6 +4,7 @@ import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import Alert from "@mui/material/Alert";
+import "./Modal.scss";
 const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
   const [selectedDateTime, setSelectedDateTime] = useState({ date: null, time: null });
   const [hiddenAlert, setHidden] = useState(true);
@@ -76,7 +77,7 @@ const ModalComponent = ({ open, onClose, dog, onSchedule }) => {
       onClose={onClose}
       aria-labelledby="parent-modal-title"
       closeAfterTransition
-      className="flex content-center items-center justify-center p-10"
+      className="meeting-modal flex content-center items-center justify-center p-10"
     >
       <div className="modal-paper bg-white flex flex-col justify-center content-center items-center md:w-[50%] w-full h-fit p-5">
         <div className="flex flex-col justify-center content-center items-center w-[90%] md:gap-4 gap-6">

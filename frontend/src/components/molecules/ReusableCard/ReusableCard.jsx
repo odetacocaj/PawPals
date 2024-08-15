@@ -3,7 +3,6 @@ import { Card, CardContent, CardMedia, Typography } from "@mui/material";
 import { Male, Female } from "@mui/icons-material";
 import ModalComponent from "../Modal/Modal";
 import Button from "../../atoms/Button/Button";
-
 import "./ReusableCard.scss";
 
 const ReusableCard = ({
